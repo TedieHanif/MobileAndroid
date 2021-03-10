@@ -1,0 +1,5 @@
+Pada project tugas ini kita membuat sebuah app bergambar seperti program paint,
+pada app ini kita dapat membuat kreasi kita pada app ini,
+kita juga dapat membuat shape dan memberi warna pada shape tersebut,
+pada app yang saya buat tidak terjadi error, semua tools dapat berjalan dengan baik,
+jika gambar ingin dihapus terdapat fitur yang bernama clear
