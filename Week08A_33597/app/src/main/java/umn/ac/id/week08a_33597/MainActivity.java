@@ -54,18 +54,15 @@ public class MainActivity extends AppCompatActivity {
             extDir = null;
         }
         curDir = lokalDir;
-        rgJenis.setOnCheckedChangeListener(new
-                                                   RadioGroup.OnCheckedChangeListener() {
-                                                       @Override
-                                                       public void onCheckedChanged(RadioGroup group, int checkedId) {
-                                                           String pilihan = ((RadioButton)
-                                                                   findViewById(rgJenis.getCheckedRadioButtonId()))
-                                                                   .getText().toString();
-                                                           if(pilihan.equalsIgnoreCase("Temporary")) curDir = tempDir;
-                                                           else if(pilihan.equalsIgnoreCase("Internal")) curDir = lokalDir;
-                                                           else curDir = extDir;
-                                                       }
-                                                   });
+        rgJenis.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                String pilihan = ((RadioButton) findViewById(rgJenis.getCheckedRadioButtonId())).getText().toString();
+                if(pilihan.equalsIgnoreCase("Temporary")) curDir = tempDir;
+                else if(pilihan.equalsIgnoreCase("Internal")) curDir = lokalDir;
+                else curDir = extDir;
+            }
+        });
         context = this;
         btnOpen = (Button) findViewById(R.id.btnOpen);
         pilihFile = new PopupMenu(context,btnOpen);
